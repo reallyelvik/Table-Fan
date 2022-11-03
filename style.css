@@ -1,0 +1,100 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: aquamarine;
+}
+
+.container {
+    position: relative;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.circle {
+    height: 150px;
+    width: 150px;
+    border: 10px solid black;
+    border-radius: 50%;
+    animation: rotate 200ms linear infinite;
+    animation-play-state: paused;
+}
+
+.circle .prop {
+    height: 20px;
+    width: 70px;
+    background-color: rgb(58, 58, 58);
+}
+
+.prop1 {
+    position: absolute;
+    top: 2.7rem;
+    left: 3.2rem;
+    transform: rotateZ(120deg);
+}
+
+.prop2 {
+    position: absolute;
+    top: 4rem;
+    left: .95rem;
+}
+
+.prop3 {
+    position: absolute;
+    top: 5.3rem;
+    left: 3.3rem;
+    transform: rotateZ(55deg);
+}
+
+.mid-circle {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: rgb(136, 0, 0);
+    top: 3.7rem;
+    left: 3.7rem;
+    z-index: 5;
+}
+
+.stand {
+    position: absolute;
+    right: 72px;
+    height: 30px;
+    width: 25px;
+    background-color: black;
+}
+
+.floor {
+    height: 10px;
+    width: 150px;
+    background-color: black;
+    position: absolute;
+    top: 200px;
+    left: 11px;
+    z-index: 1;
+}
+
+
+.button {
+    cursor: pointer;
+    height: 20px;
+    width: 15px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    background-color: rgb(136, 0, 0);
+    position: absolute;
+    top: 180px;
+    left: 130px;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
